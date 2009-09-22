@@ -153,7 +153,7 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
   }
 	
   NSString *reason;
-  if (accuracy) {
+  if (!accuracy) {
     reason =
 		[NSString stringWithFormat:@"'%@' should be equal to '%@'. %@",
 		 left, right, testDescription];
