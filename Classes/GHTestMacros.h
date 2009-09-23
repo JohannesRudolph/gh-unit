@@ -77,6 +77,8 @@
 //  the License.
 //
 
+#import "NSException+GHTestFailureExceptions.h"
+
 // GTM_BEGIN
 
 extern NSString *const GHTestFilenameKey;
@@ -969,36 +971,5 @@ continue; \
 }\
 } while (0)
 
-
-@interface NSException (GHTestMacros_GTMSenTestAdditions)
-+ (NSException *)failureInFile:(NSString *)filename 
-                        atLine:(int)lineNumber 
-               withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInCondition:(NSString *)condition 
-                             isTrue:(BOOL)isTrue 
-                             inFile:(NSString *)filename 
-                             atLine:(int)lineNumber 
-                    withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInEqualityBetweenObject:(id)left
-                                      andObject:(id)right
-                                         inFile:(NSString *)filename
-                                         atLine:(int)lineNumber
-                                withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInEqualityBetweenValue:(NSValue *)left 
-                                      andValue:(NSValue *)right 
-                                  withAccuracy:(NSValue *)accuracy 
-                                        inFile:(NSString *)filename 
-                                        atLine:(int) ineNumber
-                               withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInRaise:(NSString *)expression 
-                         inFile:(NSString *)filename 
-                         atLine:(int)lineNumber
-                withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInRaise:(NSString *)expression 
-                      exception:(NSException *)exception 
-                         inFile:(NSString *)filename 
-                         atLine:(int)lineNumber 
-                withDescription:(NSString *)formatString, ...;
-@end
 
 // SENTE_END
