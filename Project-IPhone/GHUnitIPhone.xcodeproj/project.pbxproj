@@ -117,6 +117,10 @@
 		00DA14AC0F8743DD001FE08E /* GHSetUpTearDownTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00080FA50F4FC75E0034DF4C /* GHSetUpTearDownTest.m */; };
 		00DA14AD0F8743DE001FE08E /* GHSlowTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AF12E90F2D880E009F0ABA /* GHSlowTest.m */; };
 		00DA14AE0F8743DF001FE08E /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 00080FBB0F4FC7CB0034DF4C /* GTMSenTestCase.m */; };
+		2B01B200106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B01B1FE106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h */; };
+		2B01B201106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B01B1FF106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m */; };
+		2B01B202106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B01B1FE106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h */; };
+		2B01B203106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B01B1FF106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +280,8 @@
 		00DCB8790FA4F9E10022DA5A /* GHMockCLLocationManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHMockCLLocationManagerTest.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2B01B1FE106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+GHValueFormatter.h"; sourceTree = "<group>"; };
+		2B01B1FF106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+GHValueFormatter.m"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -385,6 +391,8 @@
 				002D9C5C0F4915C2007932FE /* GHUnit.h */,
 				000204040F8EA87C00EC31BA /* Mock */,
 				002D9C5D0F4915C2007932FE /* SharedUI */,
+				2B01B1FE106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h */,
+				2B01B1FF106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -568,6 +576,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B01B202106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +584,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B01B200106A6DD8006EB8D5 /* NSValue+GHValueFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +735,7 @@
 				00A952DA0FDA2B99006A80A6 /* GHUNSObject+Swizzle.m in Sources */,
 				00A952DB0FDA2B99006A80A6 /* GHUnitIPhoneTableViewDataSource.m in Sources */,
 				00A952DD0FDA2B99006A80A6 /* GHNSInvocationProxy.m in Sources */,
+				2B01B203106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +765,7 @@
 				00A9530C0FDA2BB8006A80A6 /* GHUNSObject+Swizzle.m in Sources */,
 				00A9530D0FDA2BB8006A80A6 /* GHUnitIPhoneTableViewDataSource.m in Sources */,
 				00A9530F0FDA2BB8006A80A6 /* GHNSInvocationProxy.m in Sources */,
+				2B01B201106A6DD8006EB8D5 /* NSValue+GHValueFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
