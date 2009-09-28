@@ -11,17 +11,17 @@
 
 @implementation GHUnitIPhoneExceptionViewController
 
-@synthesize stackTrace=stackTrace_;
-
-- (id)init {
+- (id)initWithGHTestNode:(GHTestNode*)node {
 	if ((self = [super init])) {
+		[node retain];
+		node_ = node;
 		self.title = @"Exception";
 	}
 	return self;
 }
 
 - (void)dealloc {
-	[stackTrace_ release];
+	[node_ release];
 	[super dealloc];
 }
 
@@ -39,17 +39,13 @@
 	textView_.scrollEnabled = YES;
 	self.view = textView_;
 	[textView_ release]; // Retained by self.view
+	
+	textView_.text = [NSString stringWithFormat:@"%@\n\n%@", [node_ name],  [node_ stackTrace]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
 
-- (void)setStackTrace:(NSString *)stackTrace {
-	[stackTrace retain];
-	[stackTrace_ release];
-	stackTrace_ = stackTrace;
-	textView_.text = stackTrace;
-}
 
 @end

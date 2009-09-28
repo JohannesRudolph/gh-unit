@@ -282,9 +282,8 @@ NSString *const GHUnitAutoRunKey = @"GHUnit-Autorun";
 		GHTestNode *node = [[sectionNode children] objectAtIndex:indexPath.row];
 		
 		if (node.failed) {
-			GHUnitIPhoneExceptionViewController *exceptionViewController = [[GHUnitIPhoneExceptionViewController alloc] init];	
+			GHUnitIPhoneExceptionViewController *exceptionViewController = [[GHUnitIPhoneExceptionViewController alloc] initWithGHTestNode:node];	
 			[self.navigationController pushViewController:exceptionViewController animated:YES];
-			exceptionViewController.stackTrace = node.stackTrace;
 			[exceptionViewController release];
 		}	
 	}

@@ -5,13 +5,13 @@
 //  Created by Gabriel Handford on 2/20/09.
 //  Copyright 2009. All rights reserved.
 //
+#import "GHTestViewModel.h"
 
 @interface GHUnitIPhoneExceptionViewController : UIViewController {
 	UITextView *textView_;
-	
-	NSString *stackTrace_;
+	GHTestNode *node_;
 }
 
-@property (retain, nonatomic) NSString *stackTrace;
+- (id)initWithGHTestNode:(GHTestNode*)node;
 
 @end
