@@ -1,8 +1,5 @@
-Project/build/*
-Project-IPhone/build/*
-build/*
-Examples/MyTestable-IPhone/build/*
+*/build/*
+*.mode1v2
 *.mode1v3
 *.pbxuser
-Documentation
 Project/tests.log
