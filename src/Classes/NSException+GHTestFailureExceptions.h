@@ -47,6 +47,7 @@
 
 // GTM_BEGIN
 
+<<<<<<< HEAD:src/Classes/NSException+GHTestFailureExceptions.h
 #import <Foundation/Foundation.h>
 
 @interface NSException (GHTestFailureExceptions)
@@ -78,6 +79,36 @@
                          inFile:(NSString *)filename 
                          atLine:(int)lineNumber 
                 withDescription:(NSString *)formatString, ...;
+=======
+- (void)failWithException:(NSException *)exception {
+	[exception raise];
+}
+
+- (void)setUp { }
+
+- (void)tearDown { }
+
+// GTM_END
+
+- (void)setUpClass { }
+
+- (void)tearDownClass { }
+
+- (BOOL)shouldRunOnMainThread { 
+	return NO;
+}
+
+- (void)handleException:(NSException *)exception {
+	NSLog(@"Exception: %@\n%@", [exception reason], GHU_GTMStackTraceFromException(exception));
+}
+
+#pragma mark Logging
+
+- (void)log:(NSString *)message {
+	[logWriter_ log:message testCase:self];
+}
+
+>>>>>>> 05fbbe762e6eba0723018e762f0445829e4f2c71:Classes/GHTestCase.m
 @end
 
 // GTM_END
