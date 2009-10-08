@@ -47,68 +47,37 @@
 
 // GTM_BEGIN
 
-<<<<<<< HEAD:src/Classes/NSException+GHTestFailureExceptions.h
 #import <Foundation/Foundation.h>
 
-@interface NSException (GHTestFailureExceptions)
-+ (NSException *)failureInFile:(NSString *)filename 
-                        atLine:(int)lineNumber 
-               withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInCondition:(NSString *)condition 
-                             isTrue:(BOOL)isTrue 
-                             inFile:(NSString *)filename 
-                             atLine:(int)lineNumber 
-                    withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInEqualityBetweenObject:(id)left
-                                      andObject:(id)right
-                                         inFile:(NSString *)filename
-                                         atLine:(int)lineNumber
-                                withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInEqualityBetweenValue:(NSValue *)left 
-                                      andValue:(NSValue *)right 
-                                  withAccuracy:(NSValue *)accuracy 
-                                        inFile:(NSString *)filename 
-                                        atLine:(int) ineNumber
-                               withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInRaise:(NSString *)expression 
-                         inFile:(NSString *)filename 
-                         atLine:(int)lineNumber
-                withDescription:(NSString *)formatString, ...;
-+ (NSException *)failureInRaise:(NSString *)expression 
-                      exception:(NSException *)exception 
-                         inFile:(NSString *)filename 
-                         atLine:(int)lineNumber 
-                withDescription:(NSString *)formatString, ...;
-=======
-- (void)failWithException:(NSException *)exception {
-	[exception raise];
-}
-
-- (void)setUp { }
-
-- (void)tearDown { }
-
-// GTM_END
-
-- (void)setUpClass { }
-
-- (void)tearDownClass { }
-
-- (BOOL)shouldRunOnMainThread { 
-	return NO;
-}
-
-- (void)handleException:(NSException *)exception {
-	NSLog(@"Exception: %@\n%@", [exception reason], GHU_GTMStackTraceFromException(exception));
-}
-
-#pragma mark Logging
-
-- (void)log:(NSString *)message {
-	[logWriter_ log:message testCase:self];
-}
-
->>>>>>> 05fbbe762e6eba0723018e762f0445829e4f2c71:Classes/GHTestCase.m
+@interface NSException (GHUTestFailureExceptions)
++ (NSException *)ghu_failureInFile:(NSString *)filename 
+							atLine:(int)lineNumber 
+				   withDescription:(NSString *)formatString, ...;
++ (NSException *)ghu_failureInCondition:(NSString *)condition 
+								 isTrue:(BOOL)isTrue 
+								 inFile:(NSString *)filename 
+								 atLine:(int)lineNumber 
+						withDescription:(NSString *)formatString, ...;
++ (NSException *)ghu_failureInEqualityBetweenObject:(id)left
+										  andObject:(id)right
+											 inFile:(NSString *)filename
+											 atLine:(int)lineNumber
+									withDescription:(NSString *)formatString, ...;
++ (NSException *)ghu_failureInEqualityBetweenValue:(NSValue *)left 
+										  andValue:(NSValue *)right 
+									  withAccuracy:(NSValue *)accuracy 
+											inFile:(NSString *)filename 
+											atLine:(int) ineNumber
+								   withDescription:(NSString *)formatString, ...;
++ (NSException *)ghu_failureInRaise:(NSString *)expression 
+							 inFile:(NSString *)filename 
+							 atLine:(int)lineNumber
+					withDescription:(NSString *)formatString, ...;
++ (NSException *)ghu_failureInRaise:(NSString *)expression 
+						  exception:(NSException *)exception 
+							 inFile:(NSString *)filename 
+							 atLine:(int)lineNumber 
+					withDescription:(NSString *)formatString, ...;
 @end
 
 // GTM_END
