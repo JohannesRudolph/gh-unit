@@ -7,6 +7,7 @@
 //
 
 #import "GHUnit.h"
+#import "OCMock.h"
 
 @interface MyTest : GHTestCase { }
 @end
@@ -28,5 +29,10 @@
 - (void)testBar {
 	// Another test
 }
+
+- (void) testCanCreateMock {
+	id mock = [OCMockObject mockForClass:[NSString class]];
+	GHAssertNotNil(mock, nil);
+}	
 
 @end
