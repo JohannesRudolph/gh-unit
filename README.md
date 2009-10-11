@@ -361,13 +361,21 @@ You can also use GHUnit with SenTestCase, for example:
 	
 		// Assert equal objects, add custom error description
 		STAssertEqualObjects(a, b, @"Foo should be equal to: %@. Something bad happened", bar);
-	}
+        }
 
 	- (void)testBar {
 		// Another test
 	}
 
 	@end
+
+## Using OCMock
+
+Add the following import directive to your test case:
+
+    #import <SenTestingKit/SenTestingKit.h>
+
+GHUnit does not support hamcrest matchers. Visit the [OCMock Homepage](http://www.mulle-kybernetik.com/software/OCMock/) for details.
 
 ## Notes
 
