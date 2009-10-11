@@ -49,7 +49,6 @@
 
 
 #import "NSException+GHTestFailureExceptions.h"
-
 #import "NSValue+GHValueFormatter.h"
 
 NSString *const GHTestFilenameKey = @"GHTestFilenameKey";

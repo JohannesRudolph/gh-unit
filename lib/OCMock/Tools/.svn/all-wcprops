@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/OCMock/!svn/ver/27/trunk/Tools
+END
+makerelease.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/OCMock/!svn/ver/27/trunk/Tools/makerelease.rb
+END
+ReleaseManager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/OCMock/!svn/ver/27/trunk/Tools/ReleaseManager.rb
+END

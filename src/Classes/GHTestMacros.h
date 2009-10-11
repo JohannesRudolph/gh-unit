@@ -78,7 +78,6 @@
 //
 
 #import "NSException+GHTestFailureExceptions.h"
-#import "NSValue+GHValueFormatter.h"
 
 // GTM_BEGIN
 
