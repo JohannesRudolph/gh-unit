@@ -18,10 +18,10 @@
 	GHAssertEqualsWithAccuracy(15.0, 15.000001, 0.001, nil);
 }
 
-- (void)testEqualsAccuracyMessage {
-	GHAssertThrows({
+- (void)testEqualsAccuracyMessage_EXPECTED {
+	//GHAssertThrows({
 		GHAssertEqualsWithAccuracy(15.0, 16.0, 0.001, nil);
-	}, nil);
+	//}, nil);
 }
 
 - (void)testNSLog {

@@ -51,33 +51,33 @@
 
 @interface NSException (GHUTestFailureExceptions)
 + (NSException *)ghu_failureInFile:(NSString *)filename 
-							atLine:(int)lineNumber 
-				   withDescription:(NSString *)formatString, ...;
+                        atLine:(int)lineNumber 
+               withDescription:(NSString *)formatString, ...;
 + (NSException *)ghu_failureInCondition:(NSString *)condition 
-								 isTrue:(BOOL)isTrue 
-								 inFile:(NSString *)filename 
-								 atLine:(int)lineNumber 
-						withDescription:(NSString *)formatString, ...;
+                             isTrue:(BOOL)isTrue 
+                             inFile:(NSString *)filename 
+                             atLine:(int)lineNumber 
+                    withDescription:(NSString *)formatString, ...;
 + (NSException *)ghu_failureInEqualityBetweenObject:(id)left
-										  andObject:(id)right
-											 inFile:(NSString *)filename
-											 atLine:(int)lineNumber
-									withDescription:(NSString *)formatString, ...;
+                                      andObject:(id)right
+                                         inFile:(NSString *)filename
+                                         atLine:(int)lineNumber
+                                withDescription:(NSString *)formatString, ...;
 + (NSException *)ghu_failureInEqualityBetweenValue:(NSValue *)left 
-										  andValue:(NSValue *)right 
-									  withAccuracy:(NSValue *)accuracy 
-											inFile:(NSString *)filename 
-											atLine:(int) ineNumber
-								   withDescription:(NSString *)formatString, ...;
+                                      andValue:(NSValue *)right 
+                                  withAccuracy:(NSValue *)accuracy 
+                                        inFile:(NSString *)filename 
+                                        atLine:(int) ineNumber
+                               withDescription:(NSString *)formatString, ...;
 + (NSException *)ghu_failureInRaise:(NSString *)expression 
-							 inFile:(NSString *)filename 
-							 atLine:(int)lineNumber
-					withDescription:(NSString *)formatString, ...;
+                         inFile:(NSString *)filename 
+                         atLine:(int)lineNumber
+                withDescription:(NSString *)formatString, ...;
 + (NSException *)ghu_failureInRaise:(NSString *)expression 
-						  exception:(NSException *)exception 
-							 inFile:(NSString *)filename 
-							 atLine:(int)lineNumber 
-					withDescription:(NSString *)formatString, ...;
+                      exception:(NSException *)exception 
+                         inFile:(NSString *)filename 
+                         atLine:(int)lineNumber 
+                withDescription:(NSString *)formatString, ...;
 @end
 
 // GTM_END

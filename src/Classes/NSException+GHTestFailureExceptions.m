@@ -49,6 +49,7 @@
 
 
 #import "NSException+GHTestFailureExceptions.h"
+
 #import "NSValue+GHValueFormatter.h"
 
 NSString *const GHTestFilenameKey = @"GHTestFilenameKey";
@@ -56,13 +57,13 @@ NSString *const GHTestLineNumberKey = @"GHTestLineNumberKey";
 NSString *const GHTestFailureException = @"GHTestFailureException";
 
 @interface NSException (GHTestFailureExceptionsPrivateAdditions)
-+ (NSException *)failureInFile:(NSString *)filename
++ (NSException *)ghu_failureInFile:(NSString *)filename
                         atLine:(int)lineNumber
                         reason:(NSString *)reason;
 @end
 
 @implementation NSException  (GHTestFailureExceptionsPrivateAdditions)
-+ (NSException *)failureInFile:(NSString *)filename
++ (NSException *)ghu_failureInFile:(NSString *)filename
                         atLine:(int)lineNumber
                         reason:(NSString *)reason {
 	NSDictionary *userInfo =
@@ -79,7 +80,7 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 
 @implementation NSException (GHTestFailureExceptions)
 
-+ (NSException *)failureInFile:(NSString *)filename
++ (NSException *)ghu_failureInFile:(NSString *)filename
                         atLine:(int)lineNumber
                withDescription:(NSString *)formatString, ... {
 	
@@ -94,10 +95,10 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 	
 	NSString *reason = testDescription;
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
-+ (NSException *)failureInCondition:(NSString *)condition
++ (NSException *)ghu_failureInCondition:(NSString *)condition
                              isTrue:(BOOL)isTrue
                              inFile:(NSString *)filename
                              atLine:(int)lineNumber
@@ -115,10 +116,10 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 	NSString *reason = [NSString stringWithFormat:@"'%@' should be %s. %@",
 						condition, isTrue ? "TRUE" : "FALSE", testDescription];
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
-+ (NSException *)failureInEqualityBetweenObject:(id)left
++ (NSException *)ghu_failureInEqualityBetweenObject:(id)left
                                       andObject:(id)right
                                          inFile:(NSString *)filename
                                          atLine:(int)lineNumber
@@ -137,10 +138,10 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 	[NSString stringWithFormat:@"'%@' should be equal to '%@'. %@",
 	 [left description], [right description], testDescription];
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
-+ (NSException *)failureInEqualityBetweenValue:(NSValue *)left
++ (NSException *)ghu_failureInEqualityBetweenValue:(NSValue *)left
                                       andValue:(NSValue *)right
                                   withAccuracy:(NSValue *)accuracy
                                         inFile:(NSString *)filename
@@ -160,17 +161,17 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 	if (!accuracy) {
 		reason =
 		[NSString stringWithFormat:@"'%@' should be equal to '%@'. %@",
-		 [left contentDescription], [right contentDescription], testDescription];
+		 [left ghu_contentDescription], [right ghu_contentDescription], testDescription];
 	} else {
 		reason =
 		[NSString stringWithFormat:@"'%@' should be equal to '%@' +/-'%@'. %@",
-		 [left contentDescription], [right contentDescription], [accuracy contentDescription], testDescription];
+		 [left ghu_contentDescription], [right ghu_contentDescription], [accuracy ghu_contentDescription], testDescription];
 	}
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
-+ (NSException *)failureInRaise:(NSString *)expression
++ (NSException *)ghu_failureInRaise:(NSString *)expression
                          inFile:(NSString *)filename
                          atLine:(int)lineNumber
                 withDescription:(NSString *)formatString, ... {
@@ -187,10 +188,10 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 	NSString *reason = [NSString stringWithFormat:@"'%@' should raise. %@",
 						expression, testDescription];
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
-+ (NSException *)failureInRaise:(NSString *)expression
++ (NSException *)ghu_failureInRaise:(NSString *)expression
                       exception:(NSException *)exception
                          inFile:(NSString *)filename
                          atLine:(int)lineNumber
@@ -215,7 +216,7 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
 				  expression, [exception reason], testDescription];
 	}
 	
-	return [self failureInFile:filename atLine:lineNumber reason:reason];
+	return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
 }
 
 @end

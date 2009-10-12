@@ -262,7 +262,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = OCMock;
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 16;
 			files = (
 				2B70ED2F1082192A00FAC0F2 /* License.txt in Copy OCMock Resources */,
 				2B70ED301082192A00FAC0F2 /* Changes.txt in Copy OCMock Resources */,
