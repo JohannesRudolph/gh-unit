@@ -32,6 +32,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2B392B69108371B800DC2900 /* GHGTMTestCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF4B107D12E50063E093 /* GHGTMTestCaseTest.m */; };
+		2B392B6A108371B800DC2900 /* GHSenTestingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74E21C107D1F5E0063E093 /* GHSenTestingTest.m */; };
+		2B392B6B108371C600DC2900 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF5A107D12E50063E093 /* GTMSenTestCase.m */; };
 		2B68F922107BEA7A00A71D80 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AA1078D3EA00A4680F /* GHUnitTestMain.m */; };
 		2B68F923107BEA7A00A71D80 /* GHTestApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685AC1078D3EA00A4680F /* GHTestApp.h */; };
 		2B68F924107BEA7A00A71D80 /* GHTestApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AD1078D3EA00A4680F /* GHTestApp.m */; };
@@ -837,7 +840,9 @@
 		2B74DF47107D12E50063E093 /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				2B74E1B5107D1A260063E093 /* Mac */,
+				2B74DF4B107D12E50063E093 /* GHGTMTestCaseTest.m */,
+				2B74E21C107D1F5E0063E093 /* GHSenTestingTest.m */,
+				2B74DF58107D12E50063E093 /* GTM */,
 				2B74DF48107D12E50063E093 /* Data */,
 				2B74DF4A107D12E50063E093 /* GHAsyncTestCaseTest.m */,
 				2B74E220107D20740063E093 /* GHSpecialTestCase.h */,
@@ -1194,16 +1199,6 @@
 				2B9686241078D56D00A4680F /* UIKit.framework */,
 			);
 			name = iPhone;
-			sourceTree = "<group>";
-		};
-		2B74E1B5107D1A260063E093 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				2B74DF4B107D12E50063E093 /* GHGTMTestCaseTest.m */,
-				2B74E21C107D1F5E0063E093 /* GHSenTestingTest.m */,
-				2B74DF58107D12E50063E093 /* GTM */,
-			);
-			name = Mac;
 			sourceTree = "<group>";
 		};
 		2B96847F1078D27100A4680F = {
@@ -1741,6 +1736,9 @@
 				2B74E217107D1F3C0063E093 /* GHTestMacrosTest.m in Sources */,
 				2B74E218107D1F3C0063E093 /* GHTestOnMainThread.m in Sources */,
 				2B74E1B3107D19E40063E093 /* GHUnitIPhoneTestMain.m in Sources */,
+				2B392B69108371B800DC2900 /* GHGTMTestCaseTest.m in Sources */,
+				2B392B6A108371B800DC2900 /* GHSenTestingTest.m in Sources */,
+				2B392B6B108371C600DC2900 /* GTMSenTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
