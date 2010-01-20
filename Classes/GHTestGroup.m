@@ -147,6 +147,16 @@ status=status_, testCase=testCase_, exception=exception_, options=options_;
 	return nil;
 }
 
+- (NSString *)jUnitXml {
+    NSMutableString* str = [NSMutableString stringWithFormat:
+        @"<testsuite name=\"%@\" tests=\"%d\" failures=\"%d\" time=\"%0.4f\">",
+        self.name, self.stats.testCount, self.stats.failureCount, self.interval];
+    for (GHTest* child in self.children)
+        [str appendString:[child jUnitXml]];
+    [str appendString:@"</testsuite>"];
+    return str;
+}
+
 - (void)reset {
   [self _reset];
   for(id<GHTest> test in children_) {

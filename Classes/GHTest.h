@@ -101,6 +101,12 @@ extern NSString *NSStringFromGHTestStats(GHTestStats stats);
 
 - (NSArray *)log;
 
+/*!
+  Return test results in JUnit XML format for external parsing use
+  (such as a Continuous Integration system like Hudson)
+*/
+- (NSString *)jUnitXml;
+
 - (void)reset;
 - (void)cancel;
 

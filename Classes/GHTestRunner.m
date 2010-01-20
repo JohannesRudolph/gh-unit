@@ -253,6 +253,16 @@ operationQueue=operationQueue_;
       [self log:[NSString stringWithFormat:@"\t%@\n", [test identifier]]];
     }
     [self log:@"\n"];
+    
+    // Log JUnit XML
+    NSString *documentsPath = [[NSBundle mainBundle] bundlePath];
+    NSString *xmlPath = [documentsPath stringByAppendingPathComponent:
+        [NSString stringWithFormat:@"/TestResults/%@.xml", [testGroup class]]];
+    NSError* error = nil;
+    [[testGroup jUnitXml] writeToFile:xmlPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    [self log:(error == nil ?
+        [NSString stringWithFormat:@"Wrote JUnit XML at path %@: %@", xmlPath, [testGroup jUnitXml]] :
+        [NSString stringWithFormat:@"Error writing JUnit XML for class %@ at path %@:", [self class], xmlPath, [error description]])];
   }
 	
 	cancelling_ = NO;

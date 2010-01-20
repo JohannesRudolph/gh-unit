@@ -224,6 +224,17 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 	[delegate_ test:self didLog:message source:self];
 }
 
+- (NSString *)jUnitXml {
+    return [NSString stringWithFormat:
+        @"<testcase name=\"%@\" classname=\"%@\" time=\"%0.4f\">%@</testcase>",
+        self.name, [self class], self.interval,
+        self.exception != nil ?
+            [NSString stringWithFormat:@"<failure message=\"%@\">%@</failure>",
+                [self.exception description], [GHTesting descriptionForException:self.exception]] :
+                nil
+    ];
+}
+
 #pragma mark NSCoding
 
 - (void)encodeWithCoder:(NSCoder *)coder {
