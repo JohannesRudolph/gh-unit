@@ -167,4 +167,6 @@
  */
 - (void)runInOperationQueue:(NSOperationQueue *)operationQueue options:(GHTestOptions)options;
 
+- (BOOL)writeJUnitXml:(NSError**)error;
+
 @end
