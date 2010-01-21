@@ -125,4 +125,19 @@ NSString *GHUnitTest = NULL;
 	}
 }
 
+/*!
+    Override logic to write children individually, as we want each test group's
+    JUnit XML to be in its own file.
+*/
+- (BOOL)writeJUnitXml:(NSError **)error {
+    BOOL allSuccess = YES;
+    for (GHTest* child in self.children) {
+        if ([child isKindOfClass:[GHTestGroup class]]) {
+            if (![(GHTestGroup*)child writeJUnitXml:error])
+                allSuccess = NO;
+        }
+    }
+    return allSuccess;
+}
+
 @end

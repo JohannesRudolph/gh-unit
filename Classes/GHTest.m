@@ -231,7 +231,7 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
         self.exception != nil ?
             [NSString stringWithFormat:@"<failure message=\"%@\">%@</failure>",
                 [self.exception description], [GHTesting descriptionForException:self.exception]] :
-                nil
+                @""
     ];
 }
 

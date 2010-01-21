@@ -158,18 +158,21 @@ status=status_, testCase=testCase_, exception=exception_, options=options_;
 }
 
 - (BOOL)writeJUnitXml:(NSError**)error {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    // Define directory for xml & create if not there
-    NSString* documentsPath = @"build/test-results";
-    if (![fileManager fileExistsAtPath:documentsPath])
-        [fileManager createDirectoryAtPath:documentsPath attributes:nil];
+    if (self.stats.testCount > 0) {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        // Define directory for xml & create if not there
+        NSString* documentsPath = @"build/test-results";
+        if (![fileManager fileExistsAtPath:documentsPath])
+            [fileManager createDirectoryAtPath:documentsPath attributes:nil];
 
-    NSString *xmlPath = [documentsPath stringByAppendingPathComponent:
-        [NSString stringWithFormat:@"%@.xml", self.name]];
+        NSString *xmlPath = [documentsPath stringByAppendingPathComponent:
+            [NSString stringWithFormat:@"%@.xml", self.name]];
 
-    // Attempt to write the XML and return the success status
-    return [[self jUnitXml] writeToFile:xmlPath atomically:NO encoding:NSUTF8StringEncoding error:error];
+        // Attempt to write the XML and return the success status
+        return [[self jUnitXml] writeToFile:xmlPath atomically:NO encoding:NSUTF8StringEncoding error:error];
+    }
+    return YES;
 }
 
 - (void)reset {
