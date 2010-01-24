@@ -1,3 +1,30 @@
+# Release 0.4.18
+- Fixing test stats on parallel running
+- Adding reraiseException options (MacOSX)
+- Adding env var support for reraise and autorun (see README)
+- Smaller font size for test view (iPhone)
+- Show filename/line number in trace on failure
+- Show link to exception filename on failure (MacOSX)
+- Fix bug where test trace/log doesn't update if selected before running
+
+# Release 0.4.17
+- Fixing disabled on new test bug
+- Fixing bugs with All/Failed/Edit views not showing tests properly (MacOSX)
+
+# Release 0.4.16
+- Fixing hidden tests bug
+
+# Release 0.4.15
+- Text filter (MacOSX)
+- Text filter now searches test case and test names (prefix)
+- Failed filter (MacOSX/iPhone)
+- Copy text in text view (MacOSX)
+- Remember test state
+
+# Release 0.4.14
+- Fix window resizing when showing details
+- Adding test for 0 found test cases
+
 # Release 0.4.13
 - Fixing framework build: Header error and 32/64 bit universal (MacOSX)
 - Fixing SenTest macros not failing correctly

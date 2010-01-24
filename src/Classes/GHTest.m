@@ -92,16 +92,24 @@ BOOL GHTestStatusEnded(GHTestStatus status) {
 @implementation GHTest
 
 @synthesize delegate=delegate_, target=target_, selector=selector_, name=name_, interval=interval_, 
-exception=exception_, status=status_, log=log_, identifier=identifier_, disabled=disabled_;
+exception=exception_, status=status_, log=log_, identifier=identifier_, disabled=disabled_, hidden=hidden_;
+
+- (id)initWithIdentifier:(NSString *)identifier name:(NSString *)name {
+  if ((self = [self init])) {
+    identifier_ = [identifier retain];
+    name_ = [name retain];
+    interval_ = -1;
+		status_ = GHTestStatusNone;
+  }
+  return self;
+}
 
 - (id)initWithTarget:(id)target selector:(SEL)selector {
-	if ((self = [super init])) {
+  NSString *name = NSStringFromSelector(selector);
+  NSString *identifier = [NSString stringWithFormat:@"%@/%@", NSStringFromClass([target class]), name];
+	if ((self = [self initWithIdentifier:identifier name:name])) {
 		target_ = [target retain];
 		selector_ = selector;
-		interval_ = -1;
-		name_ = [NSStringFromSelector(selector_) copy];
-		status_ = GHTestStatusNone;
-		identifier_ = [[NSString stringWithFormat:@"%@/%@", NSStringFromClass([target_ class]), NSStringFromSelector(selector_)] copy];
 	}
 	return self;	
 }
@@ -111,11 +119,11 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 }
 
 - (void)dealloc {
+  [identifier_ release];
 	[name_ release];
 	[target_ release];
 	[exception_ release];
-	[log_ release];
-	[identifier_ release];
+	[log_ release];	
 	[super dealloc];
 }
 
@@ -163,13 +171,17 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 }
 
 - (void)setDisabled:(BOOL)disabled {
-	[self reset];
 	disabled_ = disabled;
 	[delegate_ testDidUpdate:self source:self];
 }
 
+- (void)setHidden:(BOOL)hidden {
+	hidden_ = hidden;
+	[delegate_ testDidUpdate:self source:self];
+}
+
 - (NSInteger)disabledCount {
-	return (disabled_ ? 1 : 0);
+	return (disabled_ || hidden_ ? 1 : 0);
 }
 
 - (void)setException:(NSException *)exception {
@@ -180,8 +192,8 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 	[delegate_ testDidUpdate:self source:self];
 }
 
-- (void)run {
-	if (status_ == GHTestStatusCancelled || disabled_) return;
+- (void)run:(GHTestOptions)options {
+	if (status_ == GHTestStatusCancelled || disabled_ || hidden_) return;
 	
 	status_ = GHTestStatusRunning;
 	
@@ -189,7 +201,8 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 	
 	[self setLogWriter:self];
 
-	[GHTesting runTest:target_ selector:selector_ withObject:nil exception:&exception_ interval:&interval_];
+  BOOL reraiseExceptions = (options & GHTestOptionReraiseExceptions == GHTestOptionReraiseExceptions);
+	[GHTesting runTestWithTarget:target_ selector:selector_ exception:&exception_ interval:&interval_ reraiseExceptions:reraiseExceptions];
 	
 	[self setLogWriter:nil];
 
@@ -211,13 +224,31 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 	[delegate_ test:self didLog:message source:self];
 }
 
+#pragma mark NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+  [coder encodeObject:identifier_ forKey:@"identifier"];
+  [coder encodeBool:hidden_ forKey:@"hidden"];
+  [coder encodeInteger:status_ forKey:@"status"];
+  [coder encodeDouble:interval_ forKey:@"interval"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+  GHTest *test = [self initWithIdentifier:[coder decodeObjectForKey:@"identifier"] name:nil];
+  test.hidden = [coder decodeBoolForKey:@"hidden"];
+  test.status = [coder decodeIntegerForKey:@"status"];
+  test.interval = [coder decodeDoubleForKey:@"interval"];
+  return test;
+}
+
 @end
 
 @implementation GHTestOperation
 
-- (id)initWithTest:(id<GHTest>)test {
+- (id)initWithTest:(id<GHTest>)test options:(GHTestOptions)options {
 	if ((self = [super init])) {
 		test_ = [test retain];
+    options_ = options;
 	}
 	return self;
 }
@@ -235,7 +266,7 @@ exception=exception_, status=status_, log=log_, identifier=identifier_, disabled
 - (void)main {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	if (!self.isCancelled) 
-		[test_ run];
+		[test_ run:options_];
 	[pool release];
 }
 

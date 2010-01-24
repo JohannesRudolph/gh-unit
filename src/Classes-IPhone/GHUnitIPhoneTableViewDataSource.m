@@ -58,6 +58,7 @@
 	}
 
 	cell.textLabel.textColor = [UIColor lightGrayColor];
+  cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
 	
 	if (editing_) {
 		if (node.isSelected) cell.textLabel.textColor = [UIColor blackColor];
@@ -75,7 +76,7 @@
 	
 	UITableViewCellAccessoryType accessoryType = UITableViewCellAccessoryNone;
 	if (self.isEditing && node.isSelected) accessoryType = UITableViewCellAccessoryCheckmark;
-	else if (node.isEnded && node.failed) accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
+	else if (node.isEnded && node.failed && node.test.exception) accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
 	cell.accessoryType = accessoryType;	
 	
 	return cell;	

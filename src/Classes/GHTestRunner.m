@@ -61,9 +61,8 @@
 @implementation GHTestRunner
 
 #define kGHTestRunnerDelegateProxyWait YES
-#define kGHTestRunnerEnvLogPath "GHUNIT_LOG"
 
-@synthesize test=test_, raiseExceptions=raiseExceptions_, delegate=delegate_, running=running_, cancelling=cancelling_, 
+@synthesize test=test_, options=options_, delegate=delegate_, running=running_, cancelling=cancelling_, 
 operationQueue=operationQueue_;
 
 - (id)initWithTest:(id<GHTest>)test {
@@ -97,7 +96,9 @@ operationQueue=operationQueue_;
 
 + (GHTestRunner *)runnerFromEnv {
 	GHTestSuite *suite = [GHTestSuite suiteFromEnv];
-	return [GHTestRunner runnerForSuite:suite];
+  GHTestRunner *runner = [GHTestRunner runnerForSuite:suite];
+  if (getenv("GHUNIT_RERAISE")) runner.options = GHTestOptionReraiseExceptions;
+	return runner;
 }	
 
 + (int)run {
@@ -106,14 +107,29 @@ operationQueue=operationQueue_;
 	return testRunner.stats.failureCount;	
 }
 
+- (void)setInParallel:(BOOL)inParallel {
+  if (inParallel) {
+		NSOperationQueue *operationQueue = [[[NSOperationQueue alloc] init] autorelease];
+		operationQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+		self.operationQueue = operationQueue;
+	} else {
+		self.operationQueue = nil;
+	}
+}  
+
+- (BOOL)isInParallel {
+  return (!!self.operationQueue);
+}
+
 - (int)runTests {
 	if (cancelling_ || running_) return -1;
+  
 	running_ = YES;
 	[self _notifyStart];
-	if (operationQueue_ && [test_ respondsToSelector:@selector(runInOperationQueue:)]) {
-		[test_ performSelector:@selector(runInOperationQueue:) withObject:operationQueue_];
+	if (operationQueue_ && [test_ respondsToSelector:@selector(runInOperationQueue:options:)]) {
+		[(id)test_ runInOperationQueue:operationQueue_ options:options_];
 	} else {
-		[test_ run];
+		[test_ run:options_];
 	}
 	return self.stats.failureCount;
 }
@@ -221,13 +237,23 @@ operationQueue=operationQueue_;
 
 - (void)_notifyFinished {
 	NSString *message = [NSString stringWithFormat:@"Test Suite '%@' finished.\n"
-											 "Executed %d of %d tests, with %d failures in %0.3f seconds.\n",
+											 "Executed %d of %d tests, with %d failures in %0.3f seconds (%d disabled).\n",
 											 [test_ name], 
 											 ([test_ stats].succeedCount + [test_ stats].failureCount), 
 											 [test_ stats].testCount,
 											 [test_ stats].failureCount, 
-											 [test_ interval]];
+											 [test_ interval],
+                       [test_ disabledCount]];
 	[self log:message];
+  
+  if ([test_ isKindOfClass:[GHTestGroup class]]) {
+    GHTestGroup *testGroup = (GHTestGroup *)test_;
+    [self log:@"\nFailed tests:\n"];
+    for(id<GHTest> test in [testGroup failedTests]) {
+      [self log:[NSString stringWithFormat:@"\t%@\n", [test identifier]]];
+    }
+    [self log:@"\n"];
+  }
 	
 	cancelling_ = NO;
 	running_ = NO;

@@ -32,6 +32,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2B131C2A110C3F65007A910A /* BWHyperlinkButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C26110C3F65007A910A /* BWHyperlinkButton.h */; };
+		2B131C2B110C3F65007A910A /* BWHyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B131C27110C3F65007A910A /* BWHyperlinkButton.m */; };
+		2B131C2C110C3F65007A910A /* BWHyperlinkButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */; };
+		2B131C2D110C3F65007A910A /* BWHyperlinkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B131C29110C3F65007A910A /* BWHyperlinkButtonCell.m */; };
 		2B392B69108371B800DC2900 /* GHGTMTestCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF4B107D12E50063E093 /* GHGTMTestCaseTest.m */; };
 		2B392B6A108371B800DC2900 /* GHSenTestingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74E21C107D1F5E0063E093 /* GHSenTestingTest.m */; };
 		2B392B6B108371C600DC2900 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF5A107D12E50063E093 /* GTMSenTestCase.m */; };
@@ -324,6 +328,10 @@
 		2B0C84A11078DBD2000B7B1C /* GHUnit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUnit_Prefix.pch; sourceTree = "<group>"; };
 		2B0C84A21078DBD2000B7B1C /* GHUnitIPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUnitIPhone_Prefix.pch; sourceTree = "<group>"; };
 		2B0C84A31078DBD2000B7B1C /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests_Prefix.pch; sourceTree = "<group>"; };
+		2B131C26110C3F65007A910A /* BWHyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHyperlinkButton.h; sourceTree = "<group>"; };
+		2B131C27110C3F65007A910A /* BWHyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHyperlinkButton.m; sourceTree = "<group>"; };
+		2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHyperlinkButtonCell.h; sourceTree = "<group>"; };
+		2B131C29110C3F65007A910A /* BWHyperlinkButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHyperlinkButtonCell.m; sourceTree = "<group>"; };
 		2B68F979107BEBA400A71D80 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2B68FA13107BF87D00A71D80 /* buildMac.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = buildMac.sh; path = ../buildMac.sh; sourceTree = SOURCE_ROOT; };
 		2B6F984A107D0DD100834D6C /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1343,6 +1351,10 @@
 		2B9685E21078D4F100A4680F /* BWToolkitFramework */ = {
 			isa = PBXGroup;
 			children = (
+				2B131C26110C3F65007A910A /* BWHyperlinkButton.h */,
+				2B131C27110C3F65007A910A /* BWHyperlinkButton.m */,
+				2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */,
+				2B131C29110C3F65007A910A /* BWHyperlinkButtonCell.m */,
 				2B9685E31078D4F100A4680F /* BWSplitView.h */,
 				2B9685E41078D4F100A4680F /* BWSplitView.m */,
 				2B9685E51078D4F100A4680F /* GradientSplitViewDimpleBitmap.tif */,
@@ -1483,6 +1495,8 @@
 				2B70ED12108218FF00FAC0F2 /* NSInvocation+OCMAdditions.h in Headers */,
 				2B70ED14108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.h in Headers */,
 				2B70ED16108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h in Headers */,
+				2B131C2A110C3F65007A910A /* BWHyperlinkButton.h in Headers */,
+				2B131C2C110C3F65007A910A /* BWHyperlinkButtonCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1696,6 +1710,8 @@
 				2B70ED13108218FF00FAC0F2 /* NSInvocation+OCMAdditions.m in Sources */,
 				2B70ED15108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.m in Sources */,
 				2B70ED17108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m in Sources */,
+				2B131C2B110C3F65007A910A /* BWHyperlinkButton.m in Sources */,
+				2B131C2D110C3F65007A910A /* BWHyperlinkButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

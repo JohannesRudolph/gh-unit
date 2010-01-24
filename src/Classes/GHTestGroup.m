@@ -52,14 +52,14 @@
 #import "GTMStackTrace.h"
 
 @interface GHTestGroup (Private)
-- (void)_addTest:(id<GHTest>)test;
 - (void)_addTestsFromTestCase:(id)testCase;
+- (void)_reset;
 @end
 
 @implementation GHTestGroup
 
 @synthesize stats=stats_, parent=parent_, children=children_, delegate=delegate_, interval=interval_, 
-status=status_, testCase=testCase_, exception=exception_;
+status=status_, testCase=testCase_, exception=exception_, options=options_;
 
 - (id)initWithName:(NSString *)name delegate:(id<GHTestDelegate>)delegate {
 	if ((self = [super init])) {
@@ -81,7 +81,7 @@ status=status_, testCase=testCase_, exception=exception_;
 - (id)initWithTestCase:(id)testCase selector:(SEL)selector delegate:(id<GHTestDelegate>)delegate {
 	if ([self initWithName:NSStringFromClass([testCase class]) delegate:delegate]) {
 		testCase_ = [testCase retain];
-		[self _addTest:[GHTest testWithTarget:testCase selector:selector]];
+		[self addTest:[GHTest testWithTarget:testCase selector:selector]];
 	}
 	return self;
 }
@@ -112,7 +112,7 @@ status=status_, testCase=testCase_, exception=exception_;
 - (void)_addTestsFromTestCase:(id)testCase {
 	NSArray *tests = [[GHTesting sharedInstance] loadTestsFromTarget:testCase];
 	for(GHTest *test in tests) {
-		[self _addTest:test];
+		[self addTest:test];
 	}
 }
 
@@ -123,11 +123,11 @@ status=status_, testCase=testCase_, exception=exception_;
 }
 
 - (void)addTestGroup:(GHTestGroup *)testGroup {
-	[self _addTest:testGroup];
+	[self addTest:testGroup];
 	[testGroup setParent:self];		
 }
 
-- (void)_addTest:(id<GHTest>)test {
+- (void)addTest:(id<GHTest>)test {
 	[test setDelegate:self];	
 	stats_.testCount += [test stats].testCount;
 	[children_ addObject:test];	
@@ -148,15 +148,33 @@ status=status_, testCase=testCase_, exception=exception_;
 }
 
 - (void)reset {
+  [self _reset];
+  for(id<GHTest> test in children_) {
+    [test reset];		
+  }
+  [delegate_ testDidUpdate:self source:self];
+}
+
+- (void)_reset {
 	status_ = GHTestStatusNone;
 	stats_ = GHTestStatsMake(0, 0, 0, stats_.testCount);
 	interval_ = 0;
 	[exception_ release];
-	exception_ = nil;
-	for(id<GHTest> test in children_) {
-		[test reset];		
-	}
-	[delegate_ testDidUpdate:self source:self];
+	exception_ = nil;	
+}
+
+- (void)_failedTests:(NSMutableArray *)tests testGroup:(id<GHTestGroup>)testGroup {  
+  for(id<GHTest> test in [testGroup children]) {
+    if ([test conformsToProtocol:@protocol(GHTestGroup)]) 
+      [self _failedTests:tests testGroup:(id<GHTestGroup>)test];
+    else if (test.status == GHTestStatusErrored) [tests addObject:test];
+  }
+}
+
+- (NSArray */*of id<GHTest>*/)failedTests {
+  NSMutableArray *tests = [NSMutableArray array];
+  [self _failedTests:tests testGroup:self];
+  return tests;
 }
 
 - (void)setException:(NSException *)exception {
@@ -181,13 +199,26 @@ status=status_, testCase=testCase_, exception=exception_;
 }
 
 - (void)setDisabled:(BOOL)disabled {
-	[self reset];
+	for(id<GHTest> test in children_)
+    [test setDisabled:disabled];
 	[delegate_ testDidUpdate:self source:self];
 }
 
 - (BOOL)isDisabled {
 	for(id<GHTest> test in children_)
 		if (![test isDisabled]) return NO;
+	return YES;
+}
+
+- (void)setHidden:(BOOL)hidden {
+	for(id<GHTest> test in children_)
+    [test setHidden:hidden];
+	[delegate_ testDidUpdate:self source:self];
+}
+
+- (BOOL)isHidden {
+	for(id<GHTest> test in children_)
+		if (![test isHidden]) return NO;
 	return YES;
 }
 
@@ -264,13 +295,13 @@ status=status_, testCase=testCase_, exception=exception_;
 			[test setException:exception_];
 		} else {				
 			if (operationQueue) {
-				[operationQueue addOperation:[[[GHTestOperation alloc] initWithTest:test] autorelease]];
+				[operationQueue addOperation:[[[GHTestOperation alloc] initWithTest:test options:options_] autorelease]];
 			} else {
 				if (![test isDisabled]) {
 					[self _checkSetUpClass];
 				}
 				if (status_ == GHTestStatusErrored) break;
-				[test run];
+				[test run:options_];
 			}
 		}
 	}
@@ -290,7 +321,13 @@ status=status_, testCase=testCase_, exception=exception_;
 	[delegate_ testDidEnd:self source:self];
 }
 
-- (void)runInOperationQueue:(NSOperationQueue *)operationQueue {
+- (void)runInOperationQueue:(NSOperationQueue *)operationQueue options:(GHTestOptions)options {
+  options_ = options;
+  
+  NSAssert(!((options_ & GHTestOptionReraiseExceptions == GHTestOptionReraiseExceptions) && operationQueue),
+           @"Can't run in parallel (through operation queue) and also have re-raise exceptions option set");
+  
+  [self _reset];
 	[self _run:operationQueue];
 }
 
@@ -300,7 +337,9 @@ status=status_, testCase=testCase_, exception=exception_;
 	return NO;
 }
 
-- (void)run {	
+- (void)run:(GHTestOptions)options {  
+  options_ = options;
+  [self _reset];
 	if ([self shouldRunOnMainThread]) {
 		[self performSelectorOnMainThread:@selector(_run:) withObject:nil waitUntilDone:YES];
 	} else {
@@ -330,6 +369,21 @@ status=status_, testCase=testCase_, exception=exception_;
 	}
 	[delegate_ testDidEnd:self source:source];
 	[delegate_ testDidUpdate:self source:self];	
+}
+
+#pragma mark NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+  [coder encodeObject:self.identifier forKey:@"identifier"];
+  [coder encodeInteger:self.status forKey:@"status"];
+  [coder encodeDouble:self.interval forKey:@"interval"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+  GHTestGroup *test = [self initWithName:[coder decodeObjectForKey:@"identifier"] delegate:nil];
+  test.status = [coder decodeIntegerForKey:@"status"];
+  test.interval = [coder decodeDoubleForKey:@"interval"];
+  return test;
 }
 
 @end
