@@ -3,7 +3,7 @@
 //  Copyright (c) 2005-2008 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
-#import "OCMockObject.h"
+#import <OCMock/OCMockObject.h>
 
 @interface OCProtocolMockObject : OCMockObject 
 {

@@ -3,7 +3,9 @@
 //  Copyright (c) 2007-2008 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
-#import "OCMConstraint.h"
+#import <OCMock/OCMConstraint.h>
+
+
 @implementation OCMConstraint
 
 + (id)constraint
@@ -88,7 +90,7 @@
 
 - (BOOL)evaluate:(id)value
 {
-	return ![value isEqual:testValue];
+	return ![value isEqualTo:testValue];
 }
 
 @end

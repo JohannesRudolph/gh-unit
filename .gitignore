@@ -1,5 +1,5 @@
-*build/*
-build
+.svn/
+build/
 Examples/MyTestable-IPhone/Libraries/GHUnit/
 *.mode1v2
 *.mode1v3
