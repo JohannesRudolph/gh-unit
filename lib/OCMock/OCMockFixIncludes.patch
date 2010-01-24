@@ -1,0 +1,185 @@
+Index: Source/OCMockRecorder.m
+===================================================================
+--- Source/OCMockRecorder.m	(revision 55)
++++ Source/OCMockRecorder.m	(working copy)
+@@ -4,9 +4,9 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #import <objc/runtime.h>
+-#import <OCMock/OCMockRecorder.h>
+-#import <OCMock/OCMArg.h>
+-#import <OCMock/OCMConstraint.h>
++#import "OCMockRecorder.h"
++#import "OCMArg.h"
++#import"OCMConstraint.h"
+ #import "OCMPassByRefSetter.h"
+ #import "OCMReturnValueProvider.h"
+ #import "OCMBoxedReturnValueProvider.h"
+Index: Source/OCMock.h
+===================================================================
+--- Source/OCMock.h	(revision 55)
++++ Source/OCMock.h	(working copy)
+@@ -3,8 +3,8 @@
+ //  Copyright (c) 2004-2008 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMockObject.h>
+-#import <OCMock/OCMockRecorder.h>
+-#import <OCMock/OCMConstraint.h>
+-#import <OCMock/OCMArg.h>
+-#import <OCMock/NSNotificationCenter+OCMAdditions.h>
++#import "OCMockObject.h"
++#import "OCMockRecorder.h"
++#import "OCMConstraint.h"
++#import "OCMArg.h"
++#import "NSNotificationCenter+OCMAdditions.h"
+Index: Source/OCMArg.m
+===================================================================
+--- Source/OCMArg.m	(revision 55)
++++ Source/OCMArg.m	(working copy)
+@@ -3,8 +3,8 @@
+ //  Copyright (c) 2009 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMArg.h>
+-#import <OCMock/OCMConstraint.h>
++#import "OCMArg.h"
++#import "OCMConstraint.h"
+ #import "OCMPassByRefSetter.h"
+ 
+ @implementation OCMArg
+Index: Source/OCProtocolMockObject.h
+===================================================================
+--- Source/OCProtocolMockObject.h	(revision 55)
++++ Source/OCProtocolMockObject.h	(working copy)
+@@ -3,7 +3,7 @@
+ //  Copyright (c) 2005-2008 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMockObject.h>
++#import "OCMockObject.h"
+ 
+ @interface OCProtocolMockObject : OCMockObject 
+ {
+Index: Source/OCMockObject.m
+===================================================================
+--- Source/OCMockObject.m	(revision 55)
++++ Source/OCMockObject.m	(working copy)
+@@ -3,15 +3,15 @@
+ //  Copyright (c) 2004-2009 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMockObject.h>
++#import "OCMockObject.h"
+ #import "OCClassMockObject.h"
+ #import "OCProtocolMockObject.h"
+ #import "OCPartialMockObject.h"
+ #import "OCObserverMockObject.h"
+-#import <OCMock/OCMockRecorder.h>
++#import "OCMockRecorder.h"
+ #import "NSInvocation+OCMAdditions.h"
+ 
+-@interface OCMockObject(Private)
++@interface OCMockObject (Private)
+ + (id)_makeNice:(OCMockObject *)mock;
+ - (NSString *)_recorderDescriptions:(BOOL)onlyExpectations;
+ @end
+Index: Source/OCMock.xcodeproj/project.pbxproj
+===================================================================
+--- Source/OCMock.xcodeproj/project.pbxproj	(revision 55)
++++ Source/OCMock.xcodeproj/project.pbxproj	(working copy)
+@@ -628,6 +628,7 @@
+ 				GCC_OPTIMIZATION_LEVEL = 0;
+ 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+ 				GCC_PREFIX_HEADER = OCMock_Prefix.pch;
++				GCC_VERSION = 4.2;
+ 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+ 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+ 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+@@ -640,6 +641,7 @@
+ 				OTHER_CFLAGS = "-fobjc-exceptions";
+ 				OTHER_LDFLAGS = "";
+ 				PRODUCT_NAME = OCMock;
++				SDKROOT = iphonesimulator3.0;
+ 				SECTORDER_FLAGS = "";
+ 				TEST_AFTER_BUILD = YES;
+ 				WARNING_CFLAGS = (
+@@ -666,6 +668,7 @@
+ 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+ 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+ 				GCC_PREFIX_HEADER = OCMock_Prefix.pch;
++				GCC_VERSION = 4.2;
+ 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+ 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+ 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+@@ -678,6 +681,7 @@
+ 				OTHER_CFLAGS = "-fobjc-exceptions";
+ 				OTHER_LDFLAGS = "";
+ 				PRODUCT_NAME = OCMock;
++				SDKROOT = iphonesimulator3.0;
+ 				SECTORDER_FLAGS = "";
+ 				TEST_AFTER_BUILD = YES;
+ 				WARNING_CFLAGS = (
+Index: Source/OCMObserverRecorder.m
+===================================================================
+--- Source/OCMObserverRecorder.m	(revision 55)
++++ Source/OCMObserverRecorder.m	(working copy)
+@@ -4,7 +4,7 @@
+ //---------------------------------------------------------------------------------------
+ 
+ #import <objc/runtime.h>
+-#import <OCMock/OCMConstraint.h>
++#import "OCMConstraint.h"
+ #import "NSInvocation+OCMAdditions.h"
+ #import "OCMObserverRecorder.h"
+ 
+Index: Source/OCPartialMockObject.m
+===================================================================
+--- Source/OCPartialMockObject.m	(revision 55)
++++ Source/OCPartialMockObject.m	(working copy)
+@@ -3,7 +3,7 @@
+ //  Copyright (c) 2009 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <objc/objc-runtime.h>
++#import <objc/runtime.h>
+ #import "OCPartialMockRecorder.h"
+ #import "OCPartialMockObject.h"
+ 
+Index: Source/OCMConstraint.m
+===================================================================
+--- Source/OCMConstraint.m	(revision 55)
++++ Source/OCMConstraint.m	(working copy)
+@@ -3,9 +3,7 @@
+ //  Copyright (c) 2007-2008 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMConstraint.h>
+-
+-
++#import "OCMConstraint.h"
+ @implementation OCMConstraint
+ 
+ + (id)constraint
+@@ -90,7 +88,7 @@
+ 
+ - (BOOL)evaluate:(id)value
+ {
+-	return ![value isEqualTo:testValue];
++	return ![value isEqual:testValue];
+ }
+ 
+ @end
+Index: Source/OCClassMockObject.h
+===================================================================
+--- Source/OCClassMockObject.h	(revision 55)
++++ Source/OCClassMockObject.h	(working copy)
+@@ -3,7 +3,7 @@
+ //  Copyright (c) 2005-2008 by Mulle Kybernetik. See License file for details.
+ //---------------------------------------------------------------------------------------
+ 
+-#import <OCMock/OCMockObject.h>
++#import "OCMockObject.h"
+ 
+ @interface OCClassMockObject : OCMockObject 
+ {
