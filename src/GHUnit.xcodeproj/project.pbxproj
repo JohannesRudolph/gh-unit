@@ -32,115 +32,115 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2B131C2A110C3F65007A910A /* BWHyperlinkButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C26110C3F65007A910A /* BWHyperlinkButton.h */; };
+		2B131C2A110C3F65007A910A /* BWHyperlinkButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C26110C3F65007A910A /* BWHyperlinkButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B131C2B110C3F65007A910A /* BWHyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B131C27110C3F65007A910A /* BWHyperlinkButton.m */; };
-		2B131C2C110C3F65007A910A /* BWHyperlinkButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */; };
+		2B131C2C110C3F65007A910A /* BWHyperlinkButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B131C2D110C3F65007A910A /* BWHyperlinkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B131C29110C3F65007A910A /* BWHyperlinkButtonCell.m */; };
+		2B131D261116D4B2007A910A /* GHAsyncTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685331078D3A500A4680F /* GHAsyncTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D271116D4B2007A910A /* GHAsyncTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685341078D3A500A4680F /* GHAsyncTestCase.m */; };
+		2B131D281116D4B2007A910A /* GHTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685351078D3A500A4680F /* GHTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D291116D4B2007A910A /* GHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685361078D3A500A4680F /* GHTest.m */; };
+		2B131D2A1116D4B2007A910A /* GHTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685371078D3A500A4680F /* GHTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D2B1116D4B2007A910A /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685381078D3A500A4680F /* GHTestCase.m */; };
+		2B131D2C1116D4B2007A910A /* GHTestGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685391078D3A500A4680F /* GHTestGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D2D1116D4B2007A910A /* GHTestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853A1078D3A500A4680F /* GHTestGroup.m */; };
+		2B131D2E1116D4B2007A910A /* GHTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853B1078D3A500A4680F /* GHTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D2F1116D4B2007A910A /* GHTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853C1078D3A500A4680F /* GHTesting.m */; };
+		2B131D301116D4B2007A910A /* GHTestMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853D1078D3A500A4680F /* GHTestMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D311116D4B2007A910A /* GHTestRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853E1078D3A500A4680F /* GHTestRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D321116D4B2007A910A /* GHTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853F1078D3A500A4680F /* GHTestRunner.m */; };
+		2B131D331116D4B2007A910A /* GHTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685401078D3A500A4680F /* GHTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D341116D4B2007A910A /* GHTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685411078D3A500A4680F /* GHTestSuite.m */; };
+		2B131D351116D4B2007A910A /* GHUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685421078D3A500A4680F /* GHUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D361116D4B2007A910A /* GHMockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685441078D3A500A4680F /* GHMockNSHTTPURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D371116D4B2007A910A /* GHMockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685451078D3A500A4680F /* GHMockNSHTTPURLResponse.m */; };
+		2B131D381116D4B2007A910A /* GHMockNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685461078D3A500A4680F /* GHMockNSURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D391116D4B2007A910A /* GHMockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685471078D3A500A4680F /* GHMockNSURLConnection.m */; };
+		2B131D3A1116D4B2007A910A /* GHNSLocale+Mock.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685481078D3A500A4680F /* GHNSLocale+Mock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D3B1116D4B2007A910A /* GHNSLocale+Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685491078D3A500A4680F /* GHNSLocale+Mock.m */; };
+		2B131D3C1116D4B2007A910A /* GHUNSObject+Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854A1078D3A500A4680F /* GHUNSObject+Swizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D3D1116D4B2007A910A /* GHUNSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854B1078D3A500A4680F /* GHUNSObject+Swizzle.m */; };
+		2B131D3E1116D4B2007A910A /* NSException+GHTestFailureExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854C1078D3A500A4680F /* NSException+GHTestFailureExceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D3F1116D4B2007A910A /* NSException+GHTestFailureExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854D1078D3A500A4680F /* NSException+GHTestFailureExceptions.m */; };
+		2B131D401116D4B2007A910A /* NSValue+GHValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854E1078D3A500A4680F /* NSValue+GHValueFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D411116D4B2007A910A /* NSValue+GHValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854F1078D3A500A4680F /* NSValue+GHValueFormatter.m */; };
+		2B131D421116D4B2007A910A /* GHTestViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685521078D3A500A4680F /* GHTestViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D431116D4B2007A910A /* GHTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685531078D3A500A4680F /* GHTestViewModel.m */; };
+		2B131D441116D4B2007A910A /* GHSimulatorMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD2D24E107B3C4800F5AC66 /* GHSimulatorMocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D451116D4C2007A910A /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AA1078D3EA00A4680F /* GHUnitTestMain.m */; };
+		2B131D461116D4C2007A910A /* GHTestApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685AC1078D3EA00A4680F /* GHTestApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D471116D4C2007A910A /* GHTestApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AD1078D3EA00A4680F /* GHTestApp.m */; };
+		2B131D481116D4C2007A910A /* GHTestApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685AE1078D3EA00A4680F /* GHTestApp.xib */; };
+		2B131D491116D4C2007A910A /* GHTestOutlineViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685AF1078D3EA00A4680F /* GHTestOutlineViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D4A1116D4C2007A910A /* GHTestOutlineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B01078D3EA00A4680F /* GHTestOutlineViewModel.m */; };
+		2B131D4B1116D4C2007A910A /* GHTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685B11078D3EA00A4680F /* GHTestView.xib */; };
+		2B131D4C1116D4C2007A910A /* GHTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685B21078D3EA00A4680F /* GHTestViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D4D1116D4C2007A910A /* GHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B31078D3EA00A4680F /* GHTestViewController.m */; };
+		2B131D4E1116D4C2007A910A /* GHTestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685B41078D3EA00A4680F /* GHTestWindow.xib */; };
+		2B131D4F1116D4C2007A910A /* GHTestWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685B51078D3EA00A4680F /* GHTestWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B131D501116D4C2007A910A /* GHTestWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B61078D3EA00A4680F /* GHTestWindowController.m */; };
 		2B392B69108371B800DC2900 /* GHGTMTestCaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF4B107D12E50063E093 /* GHGTMTestCaseTest.m */; };
 		2B392B6A108371B800DC2900 /* GHSenTestingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74E21C107D1F5E0063E093 /* GHSenTestingTest.m */; };
 		2B392B6B108371C600DC2900 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B74DF5A107D12E50063E093 /* GTMSenTestCase.m */; };
-		2B68F922107BEA7A00A71D80 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AA1078D3EA00A4680F /* GHUnitTestMain.m */; };
-		2B68F923107BEA7A00A71D80 /* GHTestApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685AC1078D3EA00A4680F /* GHTestApp.h */; };
-		2B68F924107BEA7A00A71D80 /* GHTestApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685AD1078D3EA00A4680F /* GHTestApp.m */; };
-		2B68F925107BEA7A00A71D80 /* GHTestApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685AE1078D3EA00A4680F /* GHTestApp.xib */; };
-		2B68F926107BEA7A00A71D80 /* GHTestOutlineViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685AF1078D3EA00A4680F /* GHTestOutlineViewModel.h */; };
-		2B68F927107BEA7A00A71D80 /* GHTestOutlineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B01078D3EA00A4680F /* GHTestOutlineViewModel.m */; };
-		2B68F928107BEA7A00A71D80 /* GHTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685B11078D3EA00A4680F /* GHTestView.xib */; };
-		2B68F929107BEA7A00A71D80 /* GHTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685B21078D3EA00A4680F /* GHTestViewController.h */; };
-		2B68F92A107BEA7A00A71D80 /* GHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B31078D3EA00A4680F /* GHTestViewController.m */; };
-		2B68F92B107BEA7A00A71D80 /* GHTestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685B41078D3EA00A4680F /* GHTestWindow.xib */; };
-		2B68F92C107BEA7A00A71D80 /* GHTestWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685B51078D3EA00A4680F /* GHTestWindowController.h */; };
-		2B68F92D107BEA7A00A71D80 /* GHTestWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685B61078D3EA00A4680F /* GHTestWindowController.m */; };
-		2B68F92E107BEA8300A71D80 /* GHAsyncTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685331078D3A500A4680F /* GHAsyncTestCase.h */; };
-		2B68F92F107BEA8300A71D80 /* GHAsyncTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685341078D3A500A4680F /* GHAsyncTestCase.m */; };
-		2B68F930107BEA8300A71D80 /* GHTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685351078D3A500A4680F /* GHTest.h */; };
-		2B68F931107BEA8300A71D80 /* GHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685361078D3A500A4680F /* GHTest.m */; };
-		2B68F932107BEA8300A71D80 /* GHTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685371078D3A500A4680F /* GHTestCase.h */; };
-		2B68F933107BEA8300A71D80 /* GHTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685381078D3A500A4680F /* GHTestCase.m */; };
-		2B68F934107BEA8300A71D80 /* GHTestGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685391078D3A500A4680F /* GHTestGroup.h */; };
-		2B68F935107BEA8300A71D80 /* GHTestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853A1078D3A500A4680F /* GHTestGroup.m */; };
-		2B68F936107BEA8300A71D80 /* GHTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853B1078D3A500A4680F /* GHTesting.h */; };
-		2B68F937107BEA8300A71D80 /* GHTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853C1078D3A500A4680F /* GHTesting.m */; };
-		2B68F938107BEA8300A71D80 /* GHTestMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853D1078D3A500A4680F /* GHTestMacros.h */; };
-		2B68F939107BEA8300A71D80 /* GHTestRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96853E1078D3A500A4680F /* GHTestRunner.h */; };
-		2B68F93A107BEA8300A71D80 /* GHTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96853F1078D3A500A4680F /* GHTestRunner.m */; };
-		2B68F93B107BEA8300A71D80 /* GHTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685401078D3A500A4680F /* GHTestSuite.h */; };
-		2B68F93C107BEA8300A71D80 /* GHTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685411078D3A500A4680F /* GHTestSuite.m */; };
-		2B68F93D107BEA8300A71D80 /* GHUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685421078D3A500A4680F /* GHUnit.h */; };
-		2B68F93E107BEA8300A71D80 /* GHMockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685441078D3A500A4680F /* GHMockNSHTTPURLResponse.h */; };
-		2B68F93F107BEA8300A71D80 /* GHMockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685451078D3A500A4680F /* GHMockNSHTTPURLResponse.m */; };
-		2B68F940107BEA8300A71D80 /* GHMockNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685461078D3A500A4680F /* GHMockNSURLConnection.h */; };
-		2B68F941107BEA8300A71D80 /* GHMockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685471078D3A500A4680F /* GHMockNSURLConnection.m */; };
-		2B68F942107BEA8300A71D80 /* GHNSLocale+Mock.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685481078D3A500A4680F /* GHNSLocale+Mock.h */; };
-		2B68F943107BEA8300A71D80 /* GHNSLocale+Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685491078D3A500A4680F /* GHNSLocale+Mock.m */; };
-		2B68F944107BEA8300A71D80 /* GHUNSObject+Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854A1078D3A500A4680F /* GHUNSObject+Swizzle.h */; };
-		2B68F945107BEA8300A71D80 /* GHUNSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854B1078D3A500A4680F /* GHUNSObject+Swizzle.m */; };
-		2B68F946107BEA8300A71D80 /* NSException+GHTestFailureExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854C1078D3A500A4680F /* NSException+GHTestFailureExceptions.h */; };
-		2B68F947107BEA8300A71D80 /* NSException+GHTestFailureExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854D1078D3A500A4680F /* NSException+GHTestFailureExceptions.m */; };
-		2B68F948107BEA8300A71D80 /* NSValue+GHValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B96854E1078D3A500A4680F /* NSValue+GHValueFormatter.h */; };
-		2B68F949107BEA8300A71D80 /* NSValue+GHValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B96854F1078D3A500A4680F /* NSValue+GHValueFormatter.m */; };
-		2B68F94A107BEA8300A71D80 /* GHTestViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685521078D3A500A4680F /* GHTestViewModel.h */; };
-		2B68F94B107BEA8300A71D80 /* GHTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685531078D3A500A4680F /* GHTestViewModel.m */; };
-		2B68F94C107BEA8300A71D80 /* GHSimulatorMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD2D24E107B3C4800F5AC66 /* GHSimulatorMocks.h */; };
-		2B68F95B107BEB3700A71D80 /* BWSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E31078D4F100A4680F /* BWSplitView.h */; };
+		2B68F95B107BEB3700A71D80 /* BWSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E31078D4F100A4680F /* BWSplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F95C107BEB3700A71D80 /* BWSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685E41078D4F100A4680F /* BWSplitView.m */; };
 		2B68F95D107BEB3700A71D80 /* GradientSplitViewDimpleBitmap.tif in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685E51078D4F100A4680F /* GradientSplitViewDimpleBitmap.tif */; };
 		2B68F95E107BEB3700A71D80 /* GradientSplitViewDimpleVector.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2B9685E61078D4F100A4680F /* GradientSplitViewDimpleVector.pdf */; };
-		2B68F95F107BEB3700A71D80 /* NSColor+BWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E71078D4F100A4680F /* NSColor+BWAdditions.h */; };
+		2B68F95F107BEB3700A71D80 /* NSColor+BWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E71078D4F100A4680F /* NSColor+BWAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F960107BEB3700A71D80 /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685E81078D4F100A4680F /* NSColor+BWAdditions.m */; };
-		2B68F961107BEB3700A71D80 /* NSEvent+BWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E91078D4F100A4680F /* NSEvent+BWAdditions.h */; };
+		2B68F961107BEB3700A71D80 /* NSEvent+BWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685E91078D4F100A4680F /* NSEvent+BWAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F962107BEB3700A71D80 /* NSEvent+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685EA1078D4F100A4680F /* NSEvent+BWAdditions.m */; };
-		2B68F963107BEB3700A71D80 /* GHNSInvocation+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685EC1078D4F100A4680F /* GHNSInvocation+Utils.h */; };
+		2B68F963107BEB3700A71D80 /* GHNSInvocation+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685EC1078D4F100A4680F /* GHNSInvocation+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F964107BEB3700A71D80 /* GHNSInvocation+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685ED1078D4F100A4680F /* GHNSInvocation+Utils.m */; };
-		2B68F965107BEB3700A71D80 /* GHNSInvocationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685EE1078D4F100A4680F /* GHNSInvocationProxy.h */; };
+		2B68F965107BEB3700A71D80 /* GHNSInvocationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685EE1078D4F100A4680F /* GHNSInvocationProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F966107BEB3700A71D80 /* GHNSInvocationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685EF1078D4F100A4680F /* GHNSInvocationProxy.m */; };
-		2B68F967107BEB3700A71D80 /* GHNSObject+Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F01078D4F100A4680F /* GHNSObject+Invocation.h */; };
+		2B68F967107BEB3700A71D80 /* GHNSObject+Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F01078D4F100A4680F /* GHNSObject+Invocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F968107BEB3700A71D80 /* GHNSObject+Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685F11078D4F100A4680F /* GHNSObject+Invocation.m */; };
-		2B68F969107BEB3700A71D80 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F41078D4F100A4680F /* GTMObjC2Runtime.h */; };
+		2B68F969107BEB3700A71D80 /* GTMObjC2Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F41078D4F100A4680F /* GTMObjC2Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F96A107BEB3700A71D80 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685F51078D4F100A4680F /* GTMObjC2Runtime.m */; };
-		2B68F96B107BEB3700A71D80 /* GTMStackTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F61078D4F100A4680F /* GTMStackTrace.h */; };
+		2B68F96B107BEB3700A71D80 /* GTMStackTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F61078D4F100A4680F /* GTMStackTrace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F96C107BEB3700A71D80 /* GTMStackTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9685F71078D4F100A4680F /* GTMStackTrace.m */; };
-		2B68F96D107BEB3700A71D80 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F81078D4F100A4680F /* GTMDefines.h */; };
+		2B68F96D107BEB3700A71D80 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9685F81078D4F100A4680F /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B68F97A107BEBA400A71D80 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B68F979107BEBA400A71D80 /* Cocoa.framework */; };
 		2B6F9894107D0E6B00834D6C /* libGHUnitIPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9684901078D28E00A4680F /* libGHUnitIPhone.a */; };
-		2B70ECF1108218FF00FAC0F2 /* OCMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC3108218FF00FAC0F2 /* OCMock.h */; };
-		2B70ECF2108218FF00FAC0F2 /* OCMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC6108218FF00FAC0F2 /* OCMockObject.h */; };
+		2B70ECF1108218FF00FAC0F2 /* OCMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC3108218FF00FAC0F2 /* OCMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B70ECF2108218FF00FAC0F2 /* OCMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC6108218FF00FAC0F2 /* OCMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECF3108218FF00FAC0F2 /* OCMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECC7108218FF00FAC0F2 /* OCMockObject.m */; };
-		2B70ECF4108218FF00FAC0F2 /* OCClassMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC8108218FF00FAC0F2 /* OCClassMockObject.h */; };
+		2B70ECF4108218FF00FAC0F2 /* OCClassMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECC8108218FF00FAC0F2 /* OCClassMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECF5108218FF00FAC0F2 /* OCClassMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECC9108218FF00FAC0F2 /* OCClassMockObject.m */; };
-		2B70ECF6108218FF00FAC0F2 /* OCProtocolMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCA108218FF00FAC0F2 /* OCProtocolMockObject.h */; };
+		2B70ECF6108218FF00FAC0F2 /* OCProtocolMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCA108218FF00FAC0F2 /* OCProtocolMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECF7108218FF00FAC0F2 /* OCProtocolMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECCB108218FF00FAC0F2 /* OCProtocolMockObject.m */; };
-		2B70ECF8108218FF00FAC0F2 /* OCMockRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCC108218FF00FAC0F2 /* OCMockRecorder.h */; };
+		2B70ECF8108218FF00FAC0F2 /* OCMockRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCC108218FF00FAC0F2 /* OCMockRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECF9108218FF00FAC0F2 /* OCMockRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECCD108218FF00FAC0F2 /* OCMockRecorder.m */; };
-		2B70ECFA108218FF00FAC0F2 /* OCMReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCF108218FF00FAC0F2 /* OCMReturnValueProvider.h */; };
+		2B70ECFA108218FF00FAC0F2 /* OCMReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECCF108218FF00FAC0F2 /* OCMReturnValueProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECFB108218FF00FAC0F2 /* OCMReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECD0108218FF00FAC0F2 /* OCMReturnValueProvider.m */; };
-		2B70ECFC108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD1108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.h */; };
+		2B70ECFC108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD1108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECFD108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECD2108218FF00FAC0F2 /* OCMBoxedReturnValueProvider.m */; };
-		2B70ECFE108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD3108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.h */; };
+		2B70ECFE108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD3108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ECFF108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECD4108218FF00FAC0F2 /* OCMExceptionReturnValueProvider.m */; };
-		2B70ED00108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD5108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.h */; };
+		2B70ED00108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD5108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED01108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECD6108218FF00FAC0F2 /* OCMIndirectReturnValueProvider.m */; };
-		2B70ED02108218FF00FAC0F2 /* OCMNotificationPoster.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD7108218FF00FAC0F2 /* OCMNotificationPoster.h */; };
+		2B70ED02108218FF00FAC0F2 /* OCMNotificationPoster.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECD7108218FF00FAC0F2 /* OCMNotificationPoster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED03108218FF00FAC0F2 /* OCMNotificationPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECD8108218FF00FAC0F2 /* OCMNotificationPoster.m */; };
-		2B70ED04108218FF00FAC0F2 /* OCPartialMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDA108218FF00FAC0F2 /* OCPartialMockObject.h */; };
+		2B70ED04108218FF00FAC0F2 /* OCPartialMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDA108218FF00FAC0F2 /* OCPartialMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED05108218FF00FAC0F2 /* OCPartialMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECDB108218FF00FAC0F2 /* OCPartialMockObject.m */; };
-		2B70ED06108218FF00FAC0F2 /* OCPartialMockRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDC108218FF00FAC0F2 /* OCPartialMockRecorder.h */; };
+		2B70ED06108218FF00FAC0F2 /* OCPartialMockRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDC108218FF00FAC0F2 /* OCPartialMockRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED07108218FF00FAC0F2 /* OCPartialMockRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECDD108218FF00FAC0F2 /* OCPartialMockRecorder.m */; };
-		2B70ED08108218FF00FAC0F2 /* OCObserverMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDF108218FF00FAC0F2 /* OCObserverMockObject.h */; };
+		2B70ED08108218FF00FAC0F2 /* OCObserverMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECDF108218FF00FAC0F2 /* OCObserverMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED09108218FF00FAC0F2 /* OCObserverMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECE0108218FF00FAC0F2 /* OCObserverMockObject.m */; };
-		2B70ED0A108218FF00FAC0F2 /* OCMObserverRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE1108218FF00FAC0F2 /* OCMObserverRecorder.h */; };
+		2B70ED0A108218FF00FAC0F2 /* OCMObserverRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE1108218FF00FAC0F2 /* OCMObserverRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED0B108218FF00FAC0F2 /* OCMObserverRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECE2108218FF00FAC0F2 /* OCMObserverRecorder.m */; };
-		2B70ED0C108218FF00FAC0F2 /* OCMArg.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE4108218FF00FAC0F2 /* OCMArg.h */; };
+		2B70ED0C108218FF00FAC0F2 /* OCMArg.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE4108218FF00FAC0F2 /* OCMArg.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED0D108218FF00FAC0F2 /* OCMArg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECE5108218FF00FAC0F2 /* OCMArg.m */; };
-		2B70ED0E108218FF00FAC0F2 /* OCMConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE6108218FF00FAC0F2 /* OCMConstraint.h */; };
+		2B70ED0E108218FF00FAC0F2 /* OCMConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE6108218FF00FAC0F2 /* OCMConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED0F108218FF00FAC0F2 /* OCMConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECE7108218FF00FAC0F2 /* OCMConstraint.m */; };
-		2B70ED10108218FF00FAC0F2 /* OCMPassByRefSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE8108218FF00FAC0F2 /* OCMPassByRefSetter.h */; };
+		2B70ED10108218FF00FAC0F2 /* OCMPassByRefSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECE8108218FF00FAC0F2 /* OCMPassByRefSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED11108218FF00FAC0F2 /* OCMPassByRefSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECE9108218FF00FAC0F2 /* OCMPassByRefSetter.m */; };
-		2B70ED12108218FF00FAC0F2 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECEB108218FF00FAC0F2 /* NSInvocation+OCMAdditions.h */; };
+		2B70ED12108218FF00FAC0F2 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECEB108218FF00FAC0F2 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED13108218FF00FAC0F2 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECEC108218FF00FAC0F2 /* NSInvocation+OCMAdditions.m */; };
-		2B70ED14108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECED108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.h */; };
+		2B70ED14108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECED108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED15108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECEE108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.m */; };
-		2B70ED16108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECEF108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h */; };
+		2B70ED16108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B70ECEF108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B70ED17108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECF0108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m */; };
 		2B70ED18108218FF00FAC0F2 /* OCMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECC7108218FF00FAC0F2 /* OCMockObject.m */; };
 		2B70ED19108218FF00FAC0F2 /* OCClassMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECC9108218FF00FAC0F2 /* OCClassMockObject.m */; };
@@ -161,8 +161,6 @@
 		2B70ED28108218FF00FAC0F2 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECEC108218FF00FAC0F2 /* NSInvocation+OCMAdditions.m */; };
 		2B70ED29108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECEE108218FF00FAC0F2 /* NSNotificationCenter+OCMAdditions.m */; };
 		2B70ED2A108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B70ECF0108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m */; };
-		2B70ED2F1082192A00FAC0F2 /* License.txt in Copy OCMock Resources */ = {isa = PBXBuildFile; fileRef = 2B70ED2D1082192A00FAC0F2 /* License.txt */; };
-		2B70ED301082192A00FAC0F2 /* Changes.txt in Copy OCMock Resources */ = {isa = PBXBuildFile; fileRef = 2B70ED2E1082192A00FAC0F2 /* Changes.txt */; };
 		2B70ED8E10821C0400FAC0F2 /* OCMock.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B70ECC3108218FF00FAC0F2 /* OCMock.h */; };
 		2B70ED8F10821C1700FAC0F2 /* OCMockObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B70ECC6108218FF00FAC0F2 /* OCMockObject.h */; };
 		2B70ED9010821C1700FAC0F2 /* OCMockRecorder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B70ECCC108218FF00FAC0F2 /* OCMockRecorder.h */; };
@@ -265,18 +263,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2B70ED8C10821BDD00FAC0F2 /* Copy OCMock Resources */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = OCMock;
-			dstSubfolderSpec = 16;
-			files = (
-				2B70ED2F1082192A00FAC0F2 /* License.txt in Copy OCMock Resources */,
-				2B70ED301082192A00FAC0F2 /* Changes.txt in Copy OCMock Resources */,
-			);
-			name = "Copy OCMock Resources";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2B74E11F107D185A0063E093 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +318,7 @@
 		2B131C27110C3F65007A910A /* BWHyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHyperlinkButton.m; sourceTree = "<group>"; };
 		2B131C28110C3F65007A910A /* BWHyperlinkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWHyperlinkButtonCell.h; sourceTree = "<group>"; };
 		2B131C29110C3F65007A910A /* BWHyperlinkButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWHyperlinkButtonCell.m; sourceTree = "<group>"; };
+		2B131CFE1116D359007A910A /* Untitled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Untitled-Info.plist"; sourceTree = "<group>"; };
 		2B68F979107BEBA400A71D80 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2B68FA13107BF87D00A71D80 /* buildMac.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = buildMac.sh; path = ../buildMac.sh; sourceTree = SOURCE_ROOT; };
 		2B6F984A107D0DD100834D6C /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1227,6 +1214,7 @@
 				2B96849B1078D2B800A4680F /* GHUnit-Info.plist */,
 				2B6F984C107D0DD100834D6C /* Tests-Info.plist */,
 				2B6F9856107D0DF900834D6C /* TestsIPhone-Info.plist */,
+				2B131CFE1116D359007A910A /* Untitled-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1445,27 +1433,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B68F923107BEA7A00A71D80 /* GHTestApp.h in Headers */,
-				2B68F926107BEA7A00A71D80 /* GHTestOutlineViewModel.h in Headers */,
-				2B68F929107BEA7A00A71D80 /* GHTestViewController.h in Headers */,
-				2B68F92C107BEA7A00A71D80 /* GHTestWindowController.h in Headers */,
-				2B68F92E107BEA8300A71D80 /* GHAsyncTestCase.h in Headers */,
-				2B68F930107BEA8300A71D80 /* GHTest.h in Headers */,
-				2B68F932107BEA8300A71D80 /* GHTestCase.h in Headers */,
-				2B68F934107BEA8300A71D80 /* GHTestGroup.h in Headers */,
-				2B68F936107BEA8300A71D80 /* GHTesting.h in Headers */,
-				2B68F938107BEA8300A71D80 /* GHTestMacros.h in Headers */,
-				2B68F939107BEA8300A71D80 /* GHTestRunner.h in Headers */,
-				2B68F93B107BEA8300A71D80 /* GHTestSuite.h in Headers */,
-				2B68F93D107BEA8300A71D80 /* GHUnit.h in Headers */,
-				2B68F93E107BEA8300A71D80 /* GHMockNSHTTPURLResponse.h in Headers */,
-				2B68F940107BEA8300A71D80 /* GHMockNSURLConnection.h in Headers */,
-				2B68F942107BEA8300A71D80 /* GHNSLocale+Mock.h in Headers */,
-				2B68F944107BEA8300A71D80 /* GHUNSObject+Swizzle.h in Headers */,
-				2B68F946107BEA8300A71D80 /* NSException+GHTestFailureExceptions.h in Headers */,
-				2B68F948107BEA8300A71D80 /* NSValue+GHValueFormatter.h in Headers */,
-				2B68F94A107BEA8300A71D80 /* GHTestViewModel.h in Headers */,
-				2B68F94C107BEA8300A71D80 /* GHSimulatorMocks.h in Headers */,
 				2B68F95B107BEB3700A71D80 /* BWSplitView.h in Headers */,
 				2B68F95F107BEB3700A71D80 /* NSColor+BWAdditions.h in Headers */,
 				2B68F961107BEB3700A71D80 /* NSEvent+BWAdditions.h in Headers */,
@@ -1497,6 +1464,27 @@
 				2B70ED16108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.h in Headers */,
 				2B131C2A110C3F65007A910A /* BWHyperlinkButton.h in Headers */,
 				2B131C2C110C3F65007A910A /* BWHyperlinkButtonCell.h in Headers */,
+				2B131D261116D4B2007A910A /* GHAsyncTestCase.h in Headers */,
+				2B131D281116D4B2007A910A /* GHTest.h in Headers */,
+				2B131D2A1116D4B2007A910A /* GHTestCase.h in Headers */,
+				2B131D2C1116D4B2007A910A /* GHTestGroup.h in Headers */,
+				2B131D2E1116D4B2007A910A /* GHTesting.h in Headers */,
+				2B131D301116D4B2007A910A /* GHTestMacros.h in Headers */,
+				2B131D311116D4B2007A910A /* GHTestRunner.h in Headers */,
+				2B131D331116D4B2007A910A /* GHTestSuite.h in Headers */,
+				2B131D351116D4B2007A910A /* GHUnit.h in Headers */,
+				2B131D361116D4B2007A910A /* GHMockNSHTTPURLResponse.h in Headers */,
+				2B131D381116D4B2007A910A /* GHMockNSURLConnection.h in Headers */,
+				2B131D3A1116D4B2007A910A /* GHNSLocale+Mock.h in Headers */,
+				2B131D3C1116D4B2007A910A /* GHUNSObject+Swizzle.h in Headers */,
+				2B131D3E1116D4B2007A910A /* NSException+GHTestFailureExceptions.h in Headers */,
+				2B131D401116D4B2007A910A /* NSValue+GHValueFormatter.h in Headers */,
+				2B131D421116D4B2007A910A /* GHTestViewModel.h in Headers */,
+				2B131D441116D4B2007A910A /* GHSimulatorMocks.h in Headers */,
+				2B131D461116D4C2007A910A /* GHTestApp.h in Headers */,
+				2B131D491116D4C2007A910A /* GHTestOutlineViewModel.h in Headers */,
+				2B131D4C1116D4C2007A910A /* GHTestViewController.h in Headers */,
+				2B131D4F1116D4C2007A910A /* GHTestWindowController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1509,7 +1497,6 @@
 			buildPhases = (
 				2B68F91B107BEA5500A71D80 /* Headers */,
 				2B68F91C107BEA5500A71D80 /* Resources */,
-				2B70ED8C10821BDD00FAC0F2 /* Copy OCMock Resources */,
 				2B68F91D107BEA5500A71D80 /* Sources */,
 				2B68F91E107BEA5500A71D80 /* Frameworks */,
 			);
@@ -1604,11 +1591,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B68F925107BEA7A00A71D80 /* GHTestApp.xib in Resources */,
-				2B68F928107BEA7A00A71D80 /* GHTestView.xib in Resources */,
-				2B68F92B107BEA7A00A71D80 /* GHTestWindow.xib in Resources */,
 				2B68F95D107BEB3700A71D80 /* GradientSplitViewDimpleBitmap.tif in Resources */,
 				2B68F95E107BEB3700A71D80 /* GradientSplitViewDimpleVector.pdf in Resources */,
+				2B131D481116D4C2007A910A /* GHTestApp.xib in Resources */,
+				2B131D4B1116D4C2007A910A /* GHTestView.xib in Resources */,
+				2B131D4E1116D4C2007A910A /* GHTestWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1664,25 +1651,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B68F922107BEA7A00A71D80 /* GHUnitTestMain.m in Sources */,
-				2B68F924107BEA7A00A71D80 /* GHTestApp.m in Sources */,
-				2B68F927107BEA7A00A71D80 /* GHTestOutlineViewModel.m in Sources */,
-				2B68F92A107BEA7A00A71D80 /* GHTestViewController.m in Sources */,
-				2B68F92D107BEA7A00A71D80 /* GHTestWindowController.m in Sources */,
-				2B68F92F107BEA8300A71D80 /* GHAsyncTestCase.m in Sources */,
-				2B68F931107BEA8300A71D80 /* GHTest.m in Sources */,
-				2B68F933107BEA8300A71D80 /* GHTestCase.m in Sources */,
-				2B68F935107BEA8300A71D80 /* GHTestGroup.m in Sources */,
-				2B68F937107BEA8300A71D80 /* GHTesting.m in Sources */,
-				2B68F93A107BEA8300A71D80 /* GHTestRunner.m in Sources */,
-				2B68F93C107BEA8300A71D80 /* GHTestSuite.m in Sources */,
-				2B68F93F107BEA8300A71D80 /* GHMockNSHTTPURLResponse.m in Sources */,
-				2B68F941107BEA8300A71D80 /* GHMockNSURLConnection.m in Sources */,
-				2B68F943107BEA8300A71D80 /* GHNSLocale+Mock.m in Sources */,
-				2B68F945107BEA8300A71D80 /* GHUNSObject+Swizzle.m in Sources */,
-				2B68F947107BEA8300A71D80 /* NSException+GHTestFailureExceptions.m in Sources */,
-				2B68F949107BEA8300A71D80 /* NSValue+GHValueFormatter.m in Sources */,
-				2B68F94B107BEA8300A71D80 /* GHTestViewModel.m in Sources */,
 				2B68F95C107BEB3700A71D80 /* BWSplitView.m in Sources */,
 				2B68F960107BEB3700A71D80 /* NSColor+BWAdditions.m in Sources */,
 				2B68F962107BEB3700A71D80 /* NSEvent+BWAdditions.m in Sources */,
@@ -1712,6 +1680,25 @@
 				2B70ED17108218FF00FAC0F2 /* NSMethodSignature+OCMAdditions.m in Sources */,
 				2B131C2B110C3F65007A910A /* BWHyperlinkButton.m in Sources */,
 				2B131C2D110C3F65007A910A /* BWHyperlinkButtonCell.m in Sources */,
+				2B131D271116D4B2007A910A /* GHAsyncTestCase.m in Sources */,
+				2B131D291116D4B2007A910A /* GHTest.m in Sources */,
+				2B131D2B1116D4B2007A910A /* GHTestCase.m in Sources */,
+				2B131D2D1116D4B2007A910A /* GHTestGroup.m in Sources */,
+				2B131D2F1116D4B2007A910A /* GHTesting.m in Sources */,
+				2B131D321116D4B2007A910A /* GHTestRunner.m in Sources */,
+				2B131D341116D4B2007A910A /* GHTestSuite.m in Sources */,
+				2B131D371116D4B2007A910A /* GHMockNSHTTPURLResponse.m in Sources */,
+				2B131D391116D4B2007A910A /* GHMockNSURLConnection.m in Sources */,
+				2B131D3B1116D4B2007A910A /* GHNSLocale+Mock.m in Sources */,
+				2B131D3D1116D4B2007A910A /* GHUNSObject+Swizzle.m in Sources */,
+				2B131D3F1116D4B2007A910A /* NSException+GHTestFailureExceptions.m in Sources */,
+				2B131D411116D4B2007A910A /* NSValue+GHValueFormatter.m in Sources */,
+				2B131D431116D4B2007A910A /* GHTestViewModel.m in Sources */,
+				2B131D451116D4C2007A910A /* GHUnitTestMain.m in Sources */,
+				2B131D471116D4C2007A910A /* GHTestApp.m in Sources */,
+				2B131D4A1116D4C2007A910A /* GHTestOutlineViewModel.m in Sources */,
+				2B131D4D1116D4C2007A910A /* GHTestViewController.m in Sources */,
+				2B131D501116D4C2007A910A /* GHTestWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2087,7 +2074,7 @@
 				ALTERNATE_PERMISSIONS_FILES = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLY_RULES_IN_COPY_FILES = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				BUILD_VARIANTS = normal;
 				BUNDLE_LOADER = "";
 				CODE_SIGN_IDENTITY = "Don't Code Sign";
@@ -2325,7 +2312,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-					"\"$(SRCROOT)/build/Debug\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2358,7 +2344,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-					"\"$(SRCROOT)/build/Debug\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
