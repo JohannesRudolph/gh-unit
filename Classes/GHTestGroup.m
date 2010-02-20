@@ -161,19 +161,21 @@ status=status_, testCase=testCase_, exception=exception_, options=options_;
 
 - (BOOL)writeJUnitXml:(NSError**)error {
     if (self.stats.testCount > 0) {
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        
+        NSFileManager *fileManager = [NSFileManager defaultManager];		
+		NSString* tmpDir = NSTemporaryDirectory();
+		NSString* resultsDir = [tmpDir stringByAppendingPathComponent:@"test-results"];
+		
         // Define directory for xml & create if not there
-        NSString* documentsPath = @"build/test-results";
-        if (![fileManager fileExistsAtPath:documentsPath])
-            [fileManager createDirectoryAtPath:documentsPath attributes:nil];
+        if (![fileManager fileExistsAtPath:resultsDir])
+            [fileManager createDirectoryAtPath:resultsDir attributes:nil];
 
-        NSString *xmlPath = [documentsPath stringByAppendingPathComponent:
+        NSString *xmlPath = [resultsDir stringByAppendingPathComponent:
             [NSString stringWithFormat:@"%@.xml", self.name]];
-
+		
         // Attempt to write the XML and return the success status
         return [[self jUnitXml] writeToFile:xmlPath atomically:NO encoding:NSUTF8StringEncoding error:error];
     }
+
     return YES;
 }
 
