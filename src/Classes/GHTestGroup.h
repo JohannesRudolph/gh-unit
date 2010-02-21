@@ -149,6 +149,8 @@
 
 - (void)addTestGroup:(GHTestGroup *)testGroup;
 
+- (void)addTests:(NSArray */*of id<GHTest>*/)tests;
+
 - (void)addTest:(id<GHTest>)test;
 
 - (BOOL)shouldRunOnMainThread;
@@ -166,5 +168,7 @@
  @param options Options
  */
 - (void)runInOperationQueue:(NSOperationQueue *)operationQueue options:(GHTestOptions)options;
+
+- (BOOL)writeJUnitXml:(NSError**)error;
 
 @end
